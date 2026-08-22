@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Isaac Olufadewa, MBBS, PhD</title>
+<meta name="description" content="The research of Dr. Isaac Olufadewa: machine learning and NLP for computational psychiatry, and network analysis and mathematical modelling for infectious-disease epidemiology.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Isaac Olufadewa — home">
+      <svg class="glyph" viewBox="0 0 100 100" aria-hidden="true">
+        <g stroke="#1eb489" stroke-width="3.4" opacity="0.85">
+          <line x1="30" y1="34" x2="66" y2="26"/><line x1="30" y1="34" x2="38" y2="70"/>
+          <line x1="66" y1="26" x2="72" y2="62"/><line x1="38" y1="70" x2="72" y2="62"/>
+          <line x1="66" y1="26" x2="38" y2="70"/>
+        </g>
+        <circle cx="66" cy="26" r="7.5" fill="#1eb489"/><circle cx="30" cy="34" r="6" fill="#aec2d1"/>
+        <circle cx="72" cy="62" r="6" fill="#aec2d1"/><circle cx="38" cy="70" r="8.5" fill="#ee6c4d"/>
+      </svg>
+      <span>Isaac Olufadewa<small>MBBS · PhD</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="research.html" class="is-active">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="hero-net thread" aria-hidden="true"><canvas id="thread-canvas"></canvas></div>
+  <div class="wrap">
+    <p class="eyebrow">Research programme</p>
+    <h1>Computation in service of the last mile.</h1>
+    <p class="lead">My research sits where clinical medicine, artificial intelligence and global-health policy meet. It runs along two lines that share a single mathematics &mdash; the mathematics of how things move through a population &mdash; and a single goal: reaching the people conventional systems reach last.</p>
+  </div>
+</section>
+
+<!-- PILLAR 1 -->
+<section class="band band--porcelain">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Pillar 01 · Computational psychiatry</p>
+      <h2 class="section-title">Machine learning &amp; NLP for mental health.</h2>
+      <p class="lead">Most mental-health AI is trained on English, on the wealthy, and on the clinic. I work on the inverse problem: detecting and responding to distress in the languages, idioms and settings of the Global South, where the treatment gap is widest and stigma is highest.</p>
+    </div>
+    <div class="cards reveal">
+      <article class="card">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v10H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+        <h3>Distress in its own language</h3>
+        <p>Fine-tuning large language models to recognise depression and anxiety in Nigerian Pidgin, Hausa and Yoruba &mdash; not by translating Western instruments, but by learning how communities actually express suffering.</p>
+      </article>
+      <article class="card">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="10" r="1.3"/><circle cx="15" cy="10" r="1.3"/><path d="M9 15c1.5 1.3 4.5 1.3 6 0"/></svg></div>
+        <h3>Stigma-free conversational agents</h3>
+        <p>Building chatbots and screening tools that let people seek help privately, at any hour, without the shame that keeps so many away from a clinic door.</p>
+      </article>
+      <article class="card">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l2 6 4-16 2 8h6"/></svg></div>
+        <h3>Behavioural pattern analytics</h3>
+        <p>Using sequence mining and semantic understanding to map how community mental health shifts over time &mdash; turning scattered signals into something a programme can act on.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR 2 -->
+<section class="band band--ink">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow" style="color:var(--jade-bright)">Pillar 02 · Network epidemiology</p>
+      <h2 class="section-title" style="color:#fff">Network analysis &amp; mathematical modelling.</h2>
+      <p class="lead">An outbreak is a graph before it is a headline. My modelling work treats people, places and surfaces as nodes in a transmission network, so that the few interventions a stretched system can afford land on the edges that matter.</p>
+    </div>
+    <div class="pillars reveal">
+      <article class="pillar">
+        <p class="pk">Superspreader detection</p>
+        <h3>Finding the drivers of hospital-acquired infection</h3>
+        <p>Network models that separate the fomites, patients and health workers most responsible for spreading infection inside a hospital &mdash; so infection control targets the real hubs rather than everything at once.</p>
+        <div class="methods"><span>Contact networks</span><span>Centrality</span><span>Fomite modelling</span></div>
+      </article>
+      <article class="pillar">
+        <p class="pk">Forecasting &amp; surveillance</p>
+        <h3>Predicting incidence before it peaks</h3>
+        <p>Compartmental (SIR / SEIR) and machine-learning models for outbreak trajectories and ICU infection risk, built to run on the sparse, imperfect data real health systems have &mdash; not the clean data papers assume.</p>
+        <div class="methods"><span>SIR / SEIR</span><span>Automated ML</span><span>Risk prediction</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="band band--paper">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Flagship projects</p>
+      <h2 class="section-title">From model to community.</h2>
+    </div>
+    <div class="projects reveal">
+      <article class="project">
+        <span class="status coral"><span class="d"></span>Active · deployed</span>
+        <h3>BraveHeart</h3>
+        <p>A community-led mental-health intervention for young internally displaced persons, delivered by trained lay counsellors and now running in Nigeria and Sierra Leone. Peer-reviewed evaluations show measurable reductions in depression and anxiety severity.</p>
+        <div class="stack"><span>Task-shifting</span><span>Community trial</span><span>Mental health</span></div>
+      </article>
+      <article class="project">
+        <span class="status"><span class="d"></span>Active · product</span>
+        <h3>SimbiHealth</h3>
+        <p>An AI-driven mental and sexual-health mobile application designed to reach vulnerable young people with private, culturally tailored guidance. Co-founded to put innovative digital tools directly in the hands of the communities SRHIN serves.</p>
+        <div class="stack"><span>Mobile app</span><span>Conversational AI</span><span>Sexual &amp; mental health</span></div>
+      </article>
+      <article class="project">
+        <span class="status"><span class="d"></span>Research · pilot</span>
+        <h3>GENSCORE</h3>
+        <p>A pilot study fine-tuning large language models for automated depression screening in Nigerian Pidgin English &mdash; a step toward assessment tools that meet people in their own idiom rather than forcing translation.</p>
+        <div class="stack"><span>Fine-tuned LLMs</span><span>PHQ-9</span><span>Low-resource NLP</span></div>
+      </article>
+      <article class="project">
+        <span class="status"><span class="d"></span>Research · published</span>
+        <h3>Hospital transmission network</h3>
+        <p>A network-analysis pipeline identifying potential superspreaders &mdash; surfaces, patients and personnel &mdash; behind healthcare-associated infections, giving infection-control teams a ranked, evidence-based place to intervene.</p>
+        <div class="stack"><span>Network analysis</span><span>Fomites</span><span>Infection control</span></div>
+      </article>
+      <article class="project">
+        <span class="status coral"><span class="d"></span>Programme</span>
+        <h3>SRHIN Research Academy</h3>
+        <p>A training pipeline that walks early-career African researchers from their first abstract to peer-reviewed publication, building the local research capacity that global-health equity ultimately depends on.</p>
+        <div class="stack"><span>Mentorship</span><span>Capacity building</span><span>Open science</span></div>
+      </article>
+      <article class="project">
+        <span class="status"><span class="d"></span>Collaboration</span>
+        <h3>Global Burden of Disease</h3>
+        <p>Contributions as a collaborator on GBD Study 2021 analyses, helping keep African and low-income settings represented in the world&rsquo;s most-cited estimates of disease and risk.</p>
+        <div class="stack"><span>Epidemiology</span><span>Meta-analysis</span><span>Health metrics</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section class="band band--porcelain">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Technical stack</p>
+      <h2 class="section-title">Tools of the trade.</h2>
+    </div>
+    <div class="stack-grid reveal">
+      <div class="stack-col">
+        <h4>Languages</h4>
+        <ul><li>Python</li><li>R</li><li>SQL</li></ul>
+      </div>
+      <div class="stack-col">
+        <h4>ML &amp; NLP</h4>
+        <ul><li>PyTorch</li><li>Hugging Face Transformers</li><li>scikit-learn</li><li>Pandas · NumPy</li></ul>
+      </div>
+      <div class="stack-col">
+        <h4>Methods</h4>
+        <ul><li>Natural language processing</li><li>Sentiment analysis</li><li>Compartmental modelling (SIR / SEIR)</li><li>Network analysis</li><li>Biostatistics</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="band band--ink band--tight">
+  <div class="wrap wrap--narrow">
+    <div class="cta-box">
+      <h2>Have a dataset, a question, or a community in mind?</h2>
+      <p>I am always glad to talk with labs, ministries and ventures working on health where it is hardest to deliver.</p>
+      <div class="cta-actions">
+        <a class="btn btn--solid" href="mailto:isaac.olufadewa@srhin.org">Start a conversation</a>
+        <a class="btn btn--ghost" href="publications.html">See the evidence</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Isaac Olufadewa, MBBS, PhD</div>
+        <p>Physician-scientist bridging artificial intelligence, epidemiology and health equity for the Global South.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="about.html">About</a>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <a href="https://scholar.google.com/citations?user=htUWujUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/isaacolufadewa" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://srhin.org" target="_blank" rel="noopener">SRHIN</a>
+        <a href="mailto:isaac.olufadewa@srhin.org">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> Isaac Olufadewa. All rights reserved.</span>
+      <span>Built as a static site · iiolufadewa.github.io</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

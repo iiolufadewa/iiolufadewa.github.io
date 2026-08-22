@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" role="img" aria-label="Portrait placeholder for Isaac Olufadewa">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173350"/>
+      <stop offset="1" stop-color="#0c1c2a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="22%" r="70%">
+      <stop offset="0" stop-color="#1eb489" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#1eb489" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="600" fill="url(#bg)"/>
+  <rect width="480" height="600" fill="url(#glow)"/>
+  <!-- subtle network -->
+  <g stroke="#24506e" stroke-width="1.4" opacity="0.7">
+    <line x1="70" y1="120" x2="180" y2="90"/>
+    <line x1="180" y1="90" x2="300" y2="150"/>
+    <line x1="300" y1="150" x2="410" y2="110"/>
+    <line x1="70" y1="480" x2="160" y2="520"/>
+    <line x1="160" y1="520" x2="300" y2="470"/>
+    <line x1="300" y1="470" x2="420" y2="510"/>
+    <line x1="180" y1="90" x2="160" y2="520"/>
+    <line x1="300" y1="150" x2="300" y2="470"/>
+  </g>
+  <g fill="#2b6a52">
+    <circle cx="70" cy="120" r="4"/><circle cx="300" cy="150" r="5"/>
+    <circle cx="410" cy="110" r="4"/><circle cx="160" cy="520" r="5"/>
+    <circle cx="420" cy="510" r="4"/>
+  </g>
+  <circle cx="180" cy="90" r="6" fill="#1eb489"/>
+  <circle cx="300" cy="470" r="6" fill="#ee6c4d"/>
+  <!-- monogram -->
+  <text x="240" y="330" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="500" font-size="210" fill="#ffffff" opacity="0.96">IO</text>
+  <text x="240" y="390" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="15" letter-spacing="6" fill="#aec2d1">ADD HEADSHOT</text>
+</svg>
