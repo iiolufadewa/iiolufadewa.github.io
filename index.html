@@ -1,324 +1,621 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Isaac Olufadewa, MBBS, PhD — Physician-Scientist &amp; AI Global-Health Researcher</title>
-<meta name="description" content="Dr. Isaac Iyinoluwa Olufadewa is a physician-scientist working at the intersection of clinical medicine, machine learning and global health equity — building AI, NLP and network-modelling tools for mental health and infectious disease in the Global South.">
-<meta name="author" content="Isaac Olufadewa">
-<meta property="og:title" content="Isaac Olufadewa, MBBS, PhD">
-<meta property="og:description" content="Physician-scientist bridging AI, epidemiology and health equity for the Global South.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://iiolufadewa.github.io/">
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Isaac Olufadewa — Physician-Scientist & AI Global Health Researcher">
+  <meta name="author" content="Isaac Olufadewa">
+  <title>Isaac Olufadewa</title>
+
+  <style>
+    :root {
+      --ink: #3f464d;
+      --muted: #69727a;
+      --soft: #8a9299;
+      --line: #e9ecef;
+      --link: #566f86;
+      --max: 1180px;
+      --sidebar: 255px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .site-header {
+      height: 70px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner {
+      width: min(100% - 42px, var(--max));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .site-name {
+      font-size: 21px;
+      line-height: 1;
+      font-weight: 700;
+      color: #4a5157;
+      white-space: nowrap;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      color: #667079;
+      font-size: 17px;
+    }
+
+    .site-nav a {
+      position: relative;
+      padding: 23px 0;
+    }
+
+    .site-nav a:hover {
+      text-decoration: none;
+      color: #30373d;
+    }
+
+    .site-nav a.active {
+      color: #30373d;
+    }
+
+    .site-nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 14px;
+      height: 1px;
+      background: #8b949b;
+    }
+
+    .layout {
+      width: min(100% - 42px, var(--max));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: var(--sidebar) minmax(0, 1fr);
+      gap: 88px;
+      padding: 54px 0 90px;
+    }
+
+    .sidebar {
+      padding-top: 2px;
+    }
+
+    .portrait-wrap {
+      width: 176px;
+      height: 176px;
+      border-radius: 50%;
+      border: 1px solid #e2e5e8;
+      padding: 6px;
+      margin-bottom: 22px;
+    }
+
+    .portrait {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #f1f3f4;
+    }
+
+    .monogram {
+      display: none;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background: #f1f3f4;
+      color: #68727a;
+      font-size: 38px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    .sidebar h1 {
+      margin: 0 0 8px;
+      font-size: 25px;
+      line-height: 1.25;
+      font-weight: 700;
+      color: #454c52;
+    }
+
+    .role {
+      margin: 0;
+      max-width: 230px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.62;
+    }
+
+    .sidebar-links {
+      list-style: none;
+      padding: 0;
+      margin: 28px 0 0;
+    }
+
+    .sidebar-links li {
+      margin: 0 0 9px;
+    }
+
+    .sidebar-links a {
+      color: #5e6870;
+      font-size: 14px;
+    }
+
+    .sidebar-links a::before {
+      content: "↗";
+      display: inline-block;
+      margin-right: 8px;
+      color: #8b949b;
+      font-size: 12px;
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    section {
+      scroll-margin-top: 92px;
+    }
+
+    section + section {
+      margin-top: 58px;
+      padding-top: 38px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      margin: 0 0 18px;
+      font-size: 31px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #41484e;
+      letter-spacing: -0.5px;
+    }
+
+    .intro {
+      max-width: 820px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #505960;
+      margin: 0 0 20px;
+    }
+
+    .intro:last-child {
+      margin-bottom: 0;
+    }
+
+    .research-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 46px;
+      max-width: 830px;
+      margin-top: 10px;
+    }
+
+    .research-item {
+      padding: 12px 0 13px;
+      border-bottom: 1px solid #f0f1f2;
+    }
+
+    .research-item strong {
+      display: block;
+      font-size: 16px;
+      color: #4a535a;
+      font-weight: 600;
+    }
+
+    .research-item span {
+      display: block;
+      margin-top: 2px;
+      font-size: 14px;
+      color: var(--soft);
+    }
+
+    .pub-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: 900px;
+    }
+
+    .pub {
+      padding: 0 0 22px;
+      margin: 0 0 22px;
+      border-bottom: 1px solid #f0f1f2;
+    }
+
+    .pub:last-child {
+      margin-bottom: 0;
+    }
+
+    .pub-title {
+      display: block;
+      color: #4c667b;
+      font-size: 17px;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    .pub-title:hover {
+      color: #354b5c;
+    }
+
+    .pub-meta {
+      margin-top: 6px;
+      color: #7a838a;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .pub-meta .year {
+      color: #59636b;
+      margin-left: 4px;
+    }
+
+    .more-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--link);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .contact-line {
+      margin: 0;
+      color: #5d666d;
+      font-size: 16px;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      width: min(100% - 42px, var(--max));
+      margin: 0 auto;
+      padding: 22px 0 30px;
+      color: #969da2;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 210px minmax(0, 1fr);
+        gap: 52px;
+      }
+
+      .site-nav {
+        gap: 22px;
+        font-size: 15px;
+      }
+
+      .portrait-wrap {
+        width: 150px;
+        height: 150px;
+      }
+
+      .section-label {
+        font-size: 28px;
+      }
+
+      .intro {
+        font-size: 17px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .site-header {
+        height: auto;
+        min-height: 66px;
+      }
+
+      .header-inner {
+        width: min(100% - 30px, var(--max));
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 9px;
+      }
+
+      .site-nav {
+        width: 100%;
+        gap: 19px;
+        flex-wrap: wrap;
+        font-size: 14px;
+      }
+
+      .site-nav a {
+        padding: 0;
+      }
+
+      .site-nav a.active::after {
+        display: none;
+      }
+
+      .layout {
+        width: min(100% - 30px, var(--max));
+        display: block;
+        padding: 38px 0 65px;
+      }
+
+      .sidebar {
+        display: grid;
+        grid-template-columns: 104px 1fr;
+        column-gap: 20px;
+        align-items: center;
+        padding-bottom: 34px;
+        margin-bottom: 38px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .portrait-wrap {
+        width: 104px;
+        height: 104px;
+        grid-row: span 2;
+        margin: 0;
+      }
+
+      .sidebar h1 {
+        font-size: 23px;
+      }
+
+      .role {
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .sidebar-links {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px 18px;
+        margin-top: 20px;
+      }
+
+      .sidebar-links li {
+        margin: 0;
+      }
+
+      .sidebar-links a {
+        font-size: 13px;
+      }
+
+      .research-list {
+        grid-template-columns: 1fr;
+      }
+
+      .section-label {
+        font-size: 27px;
+      }
+
+      .intro {
+        font-size: 16px;
+        line-height: 1.75;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-name" href="#about">Isaac Olufadewa</a>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="Isaac Olufadewa — home">
-      <svg class="glyph" viewBox="0 0 100 100" aria-hidden="true">
-        <g stroke="#1eb489" stroke-width="3.4" opacity="0.85">
-          <line x1="30" y1="34" x2="66" y2="26"/><line x1="30" y1="34" x2="38" y2="70"/>
-          <line x1="66" y1="26" x2="72" y2="62"/><line x1="38" y1="70" x2="72" y2="62"/>
-          <line x1="66" y1="26" x2="38" y2="70"/>
-        </g>
-        <circle cx="66" cy="26" r="7.5" fill="#1eb489"/><circle cx="30" cy="34" r="6" fill="#aec2d1"/>
-        <circle cx="72" cy="62" r="6" fill="#aec2d1"/><circle cx="38" cy="70" r="8.5" fill="#ee6c4d"/>
-      </svg>
-      <span>Isaac Olufadewa<small>MBBS · PhD</small></span>
-    </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="index.html" class="is-active">Home</a>
-      <a href="research.html">Research</a>
-      <a href="publications.html">Publications</a>
-      <a href="about.html">About</a>
-      <a href="#contact" class="nav-cta">Contact</a>
-    </nav>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-</header>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="active" href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="cv.pdf">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="hero-net" aria-hidden="true"><canvas id="hero-canvas"></canvas></div>
-  <div class="wrap hero-inner">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="hero-kicker"><span class="dot"></span> Physician-scientist · Global health &amp; AI</p>
-        <h1>Health is a<br><em>network</em> problem.</h1>
-        <p class="hero-sub">I am <strong>Dr. Isaac Olufadewa</strong> — a medical doctor and computational scientist building machine-learning, NLP and network-modelling tools that carry mental-health and infectious-disease care to the people health systems reach last: urban slums, rural communities and displacement camps across Africa.</p>
-        <div class="hero-actions">
-          <a class="btn btn--solid" href="research.html">Explore the work <span class="arw">&rarr;</span></a>
-          <a class="btn btn--ghost" href="publications.html">Publications</a>
-        </div>
-        <div class="hero-social">
-          <a href="https://scholar.google.com/citations?user=htUWujUAAAAJ&hl=en" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.84 3.77A8 8 0 0 1 12 9a8 8 0 0 1 7.16 4.27L24 9.5z"/></svg>Scholar</a>
-          <a href="https://www.linkedin.com/in/isaacolufadewa" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.2.8 24 1.77 24h20.45c.98 0 1.78-.8 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>LinkedIn</a>
-          <a href="mailto:isaac.olufadewa@srhin.org">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>Email</a>
-        </div>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="portrait-wrap">
+        <img
+          class="portrait"
+          src="assets/isaac.jpg"
+          alt="Isaac Olufadewa"
+          onerror="this.style.display='none'; document.querySelector('.monogram').style.display='flex';"
+        >
+        <div class="monogram" aria-hidden="true">IO</div>
       </div>
-      <div class="hero-portrait">
-        <span class="portrait-tag"></span>
-        <div class="portrait-frame">
-          <img src="assets/img/portrait-placeholder.jpg" alt="Portrait of Dr. Isaac Olufadewa">
-          <div class="portrait-caption"><span>DR. ISAAC OLUFADEWA</span><span>MBBS · PhD</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- readout metrics -->
-  <div class="readout">
-    <div class="wrap">
-      <div class="readout-row">
-        <div class="readout-cell"><div class="num">100<span>+</span></div><div class="lbl">Peer-reviewed works</div></div>
-        <div class="readout-cell"><div class="num">12.5<span>k</span></div><div class="lbl">Citations</div></div>
-        <div class="readout-cell"><div class="num">20</div><div class="lbl">h-index</div></div>
-        <div class="readout-cell"><div class="num">30<span>+</span></div><div class="lbl">Fellowships &amp; awards</div></div>
-        <div class="readout-cell"><div class="num">14</div><div class="lbl">Countries worked</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= RESEARCH PILLARS ================= -->
-<section class="band band--ink">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Two questions, one method</p>
-      <h2 class="section-title" style="color:#fff">I model how things move through people —<br>distress, pathogens, and care.</h2>
-      <p class="lead">Whether the signal is a virus on a hospital surface or the words someone uses for despair, the mathematics of transmission is the same. My research turns that idea into tools clinicians and communities can actually use.</p>
-    </div>
-    <div class="pillars">
-      <article class="pillar reveal">
-        <span class="pnum">01</span>
-        <p class="pk">Computational psychiatry</p>
-        <h3>Machine learning &amp; NLP for mental health</h3>
-        <p>I build language models and deep-learning systems that recognise early signals of psychological distress — and conversational agents that offer stigma-free, culturally grounded support in the languages people actually speak, including Nigerian Pidgin, Hausa and Yoruba.</p>
-        <div class="methods"><span>NLP</span><span>Fine-tuned LLMs</span><span>Sentiment analysis</span><span>Conversational AI</span></div>
-      </article>
-      <article class="pillar reveal">
-        <span class="pnum">02</span>
-        <p class="pk">Network epidemiology</p>
-        <h3>Network analysis &amp; mathematical modelling</h3>
-        <p>I use contact networks and compartmental models to map how infections spread, find the superspreaders and surfaces that drive outbreaks, and forecast trajectories — so that limited resources reach the places and moments that matter most.</p>
-        <div class="methods"><span>Network analysis</span><span>SIR / SEIR</span><span>Superspreader detection</span><span>ML forecasting</span></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOCUS AREAS ================= -->
-<section class="band band--porcelain">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Where it points</p>
-      <h2 class="section-title">Research that stays close to the ground.</h2>
-    </div>
-    <div class="cards">
-      <article class="card reveal">
-        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.35-9.5-8.5C.9 9.7 2.2 6 5.5 6 7.6 6 9 7.3 12 10c3-2.7 4.4-4 6.5-4 3.3 0 4.6 3.7 3 6.5C19 16.65 12 21 12 21z"/></svg></div>
-        <h3>Digital mental health equity</h3>
-        <p>Democratising psychiatric support for young people in slums, rural areas and displacement camps — where stigma is high and clinicians are few.</p>
-      </article>
-      <article class="card reveal">
-        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 7l3 3m4 0 3-3M7 17l3-3m4 0 3 3"/></svg></div>
-        <h3>Outbreak &amp; infection dynamics</h3>
-        <p>Modelling healthcare-associated infections, fomite transmission and community outbreaks to inform faster, fairer public-health response.</p>
-      </article>
-      <article class="card reveal">
-        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 15l3-4 3 2 4-6"/></svg></div>
-        <h3>Global burden &amp; policy</h3>
-        <p>Contributing to the Global Burden of Disease Study and advising WHO and the Lancet Commission to keep the Global South in the evidence base.</p>
-      </article>
-      <article class="card reveal">
-        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/><path d="M9 21h6M10 17v4M14 17v4"/></svg></div>
-        <h3>AI anchored in African context</h3>
-        <p>Insisting that models built for African communities be trained, validated and governed with those communities — not imported wholesale.</p>
-      </article>
-      <article class="card reveal">
-        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div>
-        <h3>Data equity engines</h3>
-        <p>Building pipelines that give low-resource settings automated, verified access to the medical and psychological data they need.</p>
-      </article>
-      <article class="card reveal">
-        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
-        <h3>Mentorship &amp; capacity</h3>
-        <p>Training the next generation of African physician-scientists through SRHIN&rsquo;s research academy — from first abstract to first Lancet paper.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SELECTED WORK ================= -->
-<section class="band band--paper">
-  <div class="wrap">
-    <div class="head-row reveal">
-      <div class="section-head">
-        <p class="eyebrow">Selected work</p>
-        <h2 class="section-title">Recent &amp; representative papers.</h2>
-      </div>
-      <a class="btn btn--outline" href="publications.html">All 100+ publications <span class="arw">&rarr;</span></a>
-    </div>
-    <div class="work-list reveal">
-      <article class="work-item">
-        <div class="work-year">2026</div>
-        <div class="work-main">
-          <h3>Network analysis of the roles of fomites, patients and healthcare personnel to identify potential superspreaders of healthcare-associated infections within a hospital</h3>
-          <div class="venue">Discover Public Health · Olufadewa I., Latimer H., West-Page H., Paul R., Dulin M., Janies D., Chen S.</div>
-        </div>
-        <div class="work-tag">Network</div>
-      </article>
-      <article class="work-item">
-        <div class="work-year">2025</div>
-        <div class="work-main">
-          <h3>Finetuning large language models for automated depression screening in Nigerian Pidgin English: the GENSCORE pilot study</h3>
-          <div class="venue">Preprint (arXiv) · Olufadewa I.I., Adesina M.A., Oladejo E.A., et al.</div>
-        </div>
-        <div class="work-tag">AI / NLP</div>
-      </article>
-      <article class="work-item">
-        <div class="work-year">2025</div>
-        <div class="work-main">
-          <h3>Machine-learning approach to predicting ventilator-associated pneumonia incidence and mortality among ICU patients in the US</h3>
-          <div class="venue">Infection Control &amp; Hospital Epidemiology · Olufadewa I.I.</div>
-        </div>
-        <div class="work-tag">ML</div>
-      </article>
-      <article class="work-item">
-        <div class="work-year">2024</div>
-        <div class="work-main">
-          <h3>Global health in low-income and middle-income countries: a framework for action</h3>
-          <div class="venue">The Lancet Global Health · Olufadewa I., Adesina M., Ayorinde T.</div>
-        </div>
-        <div class="work-cite">142 citations</div>
-      </article>
-      <article class="work-item">
-        <div class="work-year">2021</div>
-        <div class="work-main">
-          <h3>From Africa to the world: reimagining Africa&rsquo;s research capacity and culture in the global knowledge economy</h3>
-          <div class="venue">The Lancet Global Health · Olufadewa I.I., Adesina M.A., Ayorinde T.</div>
-        </div>
-        <div class="work-cite">107 citations</div>
-      </article>
-      <article class="work-item">
-        <div class="work-year">2020</div>
-        <div class="work-main">
-          <h3>&ldquo;I was scared I might die alone&rdquo;: a qualitative study on the experience of COVID-19 survivors and the quality of care received</h3>
-          <div class="venue">Journal of Global Health · Olufadewa I.I., Adesina M.A., Oladokun B., et al.</div>
-        </div>
-        <div class="work-cite">77 citations</div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FIELD NOTES ================= -->
-<section class="band band--ink">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Field notes</p>
-      <h2 class="section-title" style="color:#fff">Recent updates.</h2>
-    </div>
-    <div class="notes reveal">
-      <div class="note"><div class="date">2026</div><div class="body"><b>New paper.</b> Our network model that pinpoints superspreader surfaces and staff driving hospital-acquired infections is out in <em>Discover Public Health</em>.</div></div>
-      <div class="note"><div class="date">2025</div><div class="body"><b>GENSCORE pilot.</b> Released preliminary results on fine-tuning large language models to screen for depression in Nigerian Pidgin English &mdash; distress, understood in its own language.</div></div>
-      <div class="note"><div class="date">2025</div><div class="body"><b>UNGA80, New York.</b> Presented the <b>BraveHeart</b> community mental-health project, now running in Nigeria and Sierra Leone, at a United Nations General Assembly side event.</div></div>
-      <div class="note"><div class="date">2025</div><div class="body"><b>Milestone.</b> Marked ten years since graduating from the University of Ibadan &mdash; from an MBBS to a PhD, and from zero to 100+ publications.</div></div>
-      <div class="note"><div class="date">2024</div><div class="body"><b>Global Burden of Disease.</b> Contributed to several GBD Study 2021 analyses published across <em>The Lancet</em> family of journals.</div></div>
-      <div class="note"><div class="date">2022&ndash;2025</div><div class="body"><b>CDC HIRe Modeling Fellow.</b> Completed an infectious-disease modelling fellowship focused on healthcare-associated infections.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= AFFILIATIONS ================= -->
-<section class="band band--porcelain">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Roles &amp; affiliations</p>
-      <h2 class="section-title">Working across bench, bedside and boardroom.</h2>
-    </div>
-    <div class="affil reveal">
-      <div class="affil-item"><div class="role">Founder &amp; Executive Director<small>Community health delivery &amp; research</small></div><div class="org">SRHIN</div></div>
-      <div class="affil-item"><div class="role">Technical Working Group Member<small>Global health guidance</small></div><div class="org">WHO</div></div>
-      <div class="affil-item"><div class="role">HIRe Modeling Fellow<small>Infectious-disease modelling</small></div><div class="org">US CDC</div></div>
-      <div class="affil-item"><div class="role">Task Force Expert<small>Humanitarian relief &amp; vulnerable groups</small></div><div class="org">Lancet Commission</div></div>
-      <div class="affil-item"><div class="role">Co-Founder &amp; CEO<small>AI mental &amp; sexual health app</small></div><div class="org">SimbiHealth</div></div>
-      <div class="affil-item"><div class="role">Goalkeepers Community Member<small>Global development leadership</small></div><div class="org">Gates Foundation</div></div>
-      <div class="affil-item"><div class="role">Mandela Washington Fellow<small>Young African leaders</small></div><div class="org">YALI</div></div>
-      <div class="affil-item"><div class="role">Managing Ambassador, Africa<small>Global youth leadership</small></div><div class="org">One Young World</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PULLQUOTE ================= -->
-<section class="band band--ink band--tight">
-  <div class="wrap">
-    <div class="quote-grid">
-      <div class="pullquote reveal">
-        <blockquote>Where people live should not determine <span class="mk">whether</span> they live.</blockquote>
-        <cite>— The premise behind everything I build</cite>
-      </div>
-      <div class="reveal">
-        <p class="lead">I grew up more than three kilometres from the nearest quality clinic. That distance &mdash; measured in kilometres, in language, in data that never gets collected &mdash; is the problem my work exists to close. Computation is simply the fastest lever I have found for closing it at scale.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT / CTA ================= -->
-<section class="band band--porcelain" id="contact">
-  <div class="wrap wrap--narrow">
-    <div class="cta-box reveal">
-      <h2>Let&rsquo;s build something that reaches further.</h2>
-      <p>I welcome collaborations with neuro-AI and computational-health labs, digital-health ventures, academic institutions and multilateral global-health organisations.</p>
-      <div class="cta-actions">
-        <a class="btn btn--solid" href="mailto:isaac.olufadewa@srhin.org">isaac.olufadewa@srhin.org</a>
-        <a class="btn btn--ghost" href="https://www.linkedin.com/in/isaacolufadewa" target="_blank" rel="noopener">Connect on LinkedIn</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
       <div>
-        <div class="footer-brand">Isaac Olufadewa, MBBS, PhD</div>
-        <p>Physician-scientist bridging artificial intelligence, epidemiology and health equity for the Global South.</p>
+        <h1>Isaac Olufadewa</h1>
+        <p class="role">
+          Physician-Scientist &amp; AI Global Health Researcher
+        </p>
       </div>
-      <div>
-        <h4>Navigate</h4>
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="about.html">About</a>
-      </div>
-      <div>
-        <h4>Elsewhere</h4>
-        <a href="https://scholar.google.com/citations?user=htUWujUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="https://www.linkedin.com/in/isaacolufadewa" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://srhin.org" target="_blank" rel="noopener">SRHIN</a>
-        <a href="mailto:isaac.olufadewa@srhin.org">Email</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; <span id="year">2026</span> Isaac Olufadewa. All rights reserved.</span>
-      <span>iiolufadewa.github.io</span>
-    </div>
-  </div>
-</footer>
 
-<script src="assets/js/main.js"></script>
+      <ul class="sidebar-links">
+        <li><a href="https://scholar.google.com/citations?user=htUWujUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://github.com/iiolufadewa" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://srhin.org" target="_blank" rel="noopener">SRHIN</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <section id="about">
+        <h2 class="section-label">About me</h2>
+
+        <p class="intro">
+          I am a physician-scientist working at the intersection of global health,
+          health equity, digital health, and artificial intelligence. My work focuses
+          on using research and technology to address health challenges in underserved
+          communities, particularly in Africa.
+        </p>
+
+        <p class="intro">
+          My research spans health equity, mental health and non-communicable diseases,
+          digital health and AI, global health, and infectious disease. I am especially
+          interested in building and evaluating practical AI systems that are culturally
+          grounded, useful in low-resource settings, and connected to real public-health
+          needs.
+        </p>
+      </section>
+
+      <section id="research">
+        <h2 class="section-label">Research</h2>
+
+        <div class="research-list">
+          <div class="research-item">
+            <strong>Artificial intelligence &amp; digital health</strong>
+            <span>AI-enabled tools for health systems and underserved populations</span>
+          </div>
+
+          <div class="research-item">
+            <strong>Mental health &amp; NCDs</strong>
+            <span>Assessment, prevention, community interventions, and culturally adapted AI</span>
+          </div>
+
+          <div class="research-item">
+            <strong>Health equity</strong>
+            <span>Research designed around populations and settings that are often underrepresented</span>
+          </div>
+
+          <div class="research-item">
+            <strong>Global &amp; public health</strong>
+            <span>Evidence, implementation, and research capacity across African settings</span>
+          </div>
+
+          <div class="research-item">
+            <strong>Infectious disease</strong>
+            <span>Population health, surveillance, prevention, and health-system responses</span>
+          </div>
+
+          <div class="research-item">
+            <strong>African research capacity</strong>
+            <span>Strengthening locally led research, knowledge production, and innovation</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications">
+        <h2 class="section-label">Selected publications</h2>
+
+        <ol class="pub-list">
+          <li class="pub">
+            <a class="pub-title" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=htUWujUAAAAJ&amp;cstart=20&amp;pagesize=80&amp;citation_for_view=htUWujUAAAAJ:wbdj-CoPYUoC" target="_blank" rel="noopener">
+              Artificial intelligence anchored in African intelligence: toward equitable mental health systems in Africa
+            </a>
+            <div class="pub-meta">
+              II Olufadewa, MA Adesina, RI Oladele, AS Jegede · The Lancet Regional Health–Africa
+              <span class="year">2026</span>
+            </div>
+          </li>
+
+          <li class="pub">
+            <a class="pub-title" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=htUWujUAAAAJ&amp;cstart=20&amp;pagesize=80&amp;citation_for_view=htUWujUAAAAJ:Fu2w8maKXqMC" target="_blank" rel="noopener">
+              Understanding Distress in Its Own Language: A Case Study of Culturally Adapting Depression Assessment in Nigerian Pidgin English Contexts
+            </a>
+            <div class="pub-meta">
+              M Adesina, P Taiwo, I Olufadewa, F Mustapha, D Abiose, I Soneye, et al. · Global Health Cases
+              <span class="year">2026</span>
+            </div>
+          </li>
+
+          <li class="pub">
+            <a class="pub-title" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=htUWujUAAAAJ&amp;cstart=20&amp;pagesize=80&amp;citation_for_view=htUWujUAAAAJ:hkOj_22Ku90C" target="_blank" rel="noopener">
+              Evaluating Automated Machine Learning Approaches for Early ICU Infection Surveillance
+            </a>
+            <div class="pub-meta">
+              B Oladokun, I Olufadewa
+              <span class="year">2026</span>
+            </div>
+          </li>
+
+          <li class="pub">
+            <a class="pub-title" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=htUWujUAAAAJ&amp;citation_for_view=htUWujUAAAAJ:0EnyYjriUFMC" target="_blank" rel="noopener">
+              Global health in low-income and middle-income countries: a framework for action
+            </a>
+            <div class="pub-meta">
+              I Olufadewa, M Adesina, T Ayorinde · The Lancet Global Health
+              <span class="year">2021</span>
+            </div>
+          </li>
+
+          <li class="pub">
+            <a class="pub-title" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=htUWujUAAAAJ&amp;citation_for_view=htUWujUAAAAJ:u-x6o8ySG0sC" target="_blank" rel="noopener">
+              From Africa to the World: Reimagining Africa’s research capacity and culture in the global knowledge economy
+            </a>
+            <div class="pub-meta">
+              II Olufadewa, MA Adesina, T Ayorinde · Journal of Global Health
+              <span class="year">2020</span>
+            </div>
+          </li>
+        </ol>
+
+        <a class="more-link" href="https://scholar.google.com/citations?user=htUWujUAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+          View all publications on Google Scholar ↗
+        </a>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-label">Contact</h2>
+        <p class="contact-line">
+          For research, collaboration, or speaking enquiries, please use
+          <a href="https://srhin.org" target="_blank" rel="noopener">SRHIN</a>.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    © <span id="year"></span> Isaac Olufadewa
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const sections = document.querySelectorAll("main section");
+    const navLinks = document.querySelectorAll(".site-nav a[href^='#']");
+
+    const updateNav = () => {
+      let current = "about";
+      sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 150) current = section.id;
+      });
+
+      navLinks.forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+      });
+    };
+
+    window.addEventListener("scroll", updateNav, { passive: true });
+    updateNav();
+  </script>
 </body>
 </html>
